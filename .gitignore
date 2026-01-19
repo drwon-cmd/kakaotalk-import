@@ -1,0 +1,31 @@
+# 카카오톡 원본 대화 파일 (개인정보 포함 가능)
+raw/**/*.txt
+!raw/**/.gitkeep
+
+# 생성된 요약 파일 (개인정보 포함 가능)
+summaries/**/*.md
+summaries/**/*.pdf
+!summaries/**/.gitkeep
+
+# 임시 파일
+*.tmp
+temp.md
+*.bak
+
+# OS 생성 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js (md-to-pdf 관련)
+node_modules/
+package-lock.json
+
+# 로그 파일
+*.log
