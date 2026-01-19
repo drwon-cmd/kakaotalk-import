@@ -1,4 +1,4 @@
-# 카카오톡 대화 요약 지침
+﻿# 카카오톡 대화 요약 지침
 
 ## 개요
 이 문서는 카카오톡 단체 채팅방 대화 내용을 요약할 때 따라야 할 표준 지침입니다.
@@ -168,13 +168,21 @@ Park Hee Duk이 Manus AI에 대한 상세 분석 자료를 공유하며 논의 �
 ### 5. 파일 명명 규칙
 ```
 [채팅방명]_[연도][월]_대화요약.md
-예: 마케팅팀_2026년1월_대화요약.md
+[채팅방명]_[연도][월]_대화요약.pdf
+예: 마케팅팀_2026년1월_대화요약.md / .pdf
 ```
 
 ### 6. 저장 위치
 - **원본 txt 파일**: `kakaotalk-import/raw/YYYY-MM-DD-NNN/`
 - **요약 md 파일**: `kakaotalk-import/summaries/YYYY-MM-DD-NNN/`
+- **요약 pdf 파일**: `kakaotalk-import/summaries/YYYY-MM-DD-NNN/` (md와 동일 위치)
 - raw와 summaries의 하위 폴더명(날짜-일렬번호)은 **동일하게 유지**
+
+### 7. PDF 자동 생성
+요약 md 파일 생성 후 **PDF 파일도 함께 생성**합니다.
+- **변환 도구**: md-to-pdf (Node.js)
+- **스크립트**: scripts/convert-to-pdf.ps1
+- **실행**: Claude가 md 작성 후 자동 실행
 
 ## 특수 상황 처리
 
@@ -210,7 +218,8 @@ kakaotalk-import/scripts/
 ├── new-kakao-folder.bat      # 바탕화면 단축키용
 ├── start-watcher.bat         # 감시 시작
 ├── install-autostart.ps1     # 시작 프로그램 등록
-└── create-desktop-shortcut.ps1  # 바탕화면 단축키 생성
+├── create-desktop-shortcut.ps1  # 바탕화면 단축키 생성
+└── convert-to-pdf.ps1        # MD → PDF 변환
 ```
 
 ### 설치 방법
