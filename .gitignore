@@ -7,6 +7,11 @@ summaries/**/*.md
 summaries/**/*.pdf
 !summaries/**/.gitkeep
 
+# 분석 결과 파일 (개인정보 포함)
+analysis/outputs/**/*.md
+analysis/outputs/**/*.json
+!analysis/outputs/.gitkeep
+
 # 임시 파일
 *.tmp
 temp.md
