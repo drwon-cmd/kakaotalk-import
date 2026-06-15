@@ -2,6 +2,11 @@
 raw/**/*.txt
 !raw/**/.gitkeep
 
+# 카카오톡 내보내기 — 모든 폴더 (업무보고/ 포함). 2026-06-15 히스토리 정리 후 재추적 차단
+KakaoTalk_*.txt
+KakaoTalk_*.zip
+KakaoTalk_*.csv
+
 # 생성된 요약 파일 (개인정보 포함 가능)
 summaries/**/*.md
 summaries/**/*.pdf
